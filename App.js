@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Button, TextComponent } from 'react-native';
 
 export default function App() {
   const [enteredGoal, setEnteredGoal] = useState('');
@@ -25,7 +25,7 @@ export default function App() {
       </View>
 
       <View>
-
+        {courseGoals.map((goal) => <Text key={goal} >{goal}</Text>)}
       </View >
     </View>
   );
